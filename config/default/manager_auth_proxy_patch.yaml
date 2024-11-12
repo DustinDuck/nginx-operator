@@ -6,7 +6,13 @@ metadata:
   name: controller-manager
   namespace: system
 spec:
+  selector:
+    matchLabels:
+      app: nginx-operator
   template:
+    metadata:
+      labels:
+        app: nginx-operator
     spec:
       affinity:
         nodeAffinity:
